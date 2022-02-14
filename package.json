@@ -1,0 +1,22 @@
+{
+  "name": "the_sacred_place",
+  "version": "1.0.0",
+  "description": "IMD3901 Term Project - The Sacred Meeting Place",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaxque/the_sacred_place.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jaxque/the_sacred_place/issues"
+  },
+  "homepage": "https://github.com/jaxque/the_sacred_place#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
