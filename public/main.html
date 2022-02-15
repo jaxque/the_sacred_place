@@ -33,4 +33,40 @@
                 }
             </script>
     </head>
+
+    <body>
+        <!-- Start Screen -->
+        <div id="user-gesture-overlay">
+            <div class="UI">
+                <!-- Play button -->
+                <button id="user-gesture-button" onclick="startGame();">Play</button>
+
+                <!-- Options button 
+                <button id="user-gesture-button" onclick="();">Options</button> -->
+
+                <!-- Credits button 
+                <button id="user-gesture-button" onclick="();">Credits</button> -->
+            </div>
+
+            <!-- Game -->
+            <a-scene game>
+                <a-assets timeout="1000">
+                    <!-- Ambience (add audio) -->
+                    <audio id="ambience" src="" preload="auto" crossorigin="anonymous"></audio>
+
+                    <!-- Images and imported models -->
+                    
+                </a-assets>
+
+                <a-entity camera wasd-controls look-controls position="0 1.6 0">
+                    <a-entity cursor="rayOrigin:mouse;" raycaster="far:20; interval:200; object:.interactive"></a-entity>
+                    
+                    <!-- Flashlight
+                        <a-entity light="type:spot; intensity:0.6; castShadow:true; shadowBias:-0.0005; angle:40; penumbra:1.0;" 
+                        position="0.5 -0.5 0" rotation="0 0 0"></a-entity> -->
+
+                </a-entity>
+            </a-scene>
+        </div>
+    </body>
 </html>
