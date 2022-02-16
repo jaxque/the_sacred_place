@@ -18,5 +18,6 @@
   "homepage": "https://github.com/jaxque/the_sacred_place#readme",
   "dependencies": {
     "express": "^4.17.2"
-  }
+  },
+  "devDependencies": {}
 }

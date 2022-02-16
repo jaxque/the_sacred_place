@@ -14,7 +14,7 @@
 
             <link rel="stylesheet" href="/css/user-gesture.css">
             <script>
-                AFRAME.registerComponent('Play', {
+                AFRAME.registerComponent('game', {
                     init: function() {
                         console.log('scene loaded');
                         document.querySelector('#user-gesture-button').style.display='block';
@@ -64,8 +64,15 @@
                     <!-- Flashlight
                         <a-entity light="type:spot; intensity:0.6; castShadow:true; shadowBias:-0.0005; angle:40; penumbra:1.0;" 
                         position="0.5 -0.5 0" rotation="0 0 0"></a-entity> -->
-
                 </a-entity>
+
+                <a-entity>
+                    <a-entity class = "color interactive"></a-entity>
+                      <a-entity id="color_box" position="-1 2 -3"
+                      geometry="primitive:box; width:1.0; height:1.0; depth:1.0" 
+                      material="color:red;"></a-entity>
+                  </a-entity>
+
             </a-scene>
         </div>
     </body>
