@@ -13,36 +13,63 @@
             <script src="/js/aframe-environment-component.min.js"></script>
 
             <link rel="stylesheet" href="/css/user-gesture.css">
+    
+
+        <script>
+            AFRAME.registerComponent('start-experience', {
+                init: function() {
+                    console.log('scene loaded');
+                    document.querySelector('#user-gesture-button').style.display='block';
+                }
+            });
+
+            const startExperience = function() {
+                    // Hide user-gesture overlay
+                    document.querySelector('#user-gesture-overlay').style.display='none';
+
+                    //start ambient music
+                    const ambientSounds = document.querySelectorAll('.bgm');
+                    ambientSounds.forEach(function(soundEntity) {
+                    soundEntity.components.sound.playSound();
+                });
+                }
+        </script>
     </head>
 
     <body>
-        <!-- Game -->
-        <a-scene game>
-            <a-assets timeout="1000">
-                <!-- Ambience (add audio) 
-                <audio id="ambience" src="" preload="auto" crossorigin="anonymous"></audio> -->
+        
 
-                <!-- Images and imported models -->
-                
+        <div id="user-gesture-overlay">
+            <div class="center">
+                <!-- Brief introduction -->
+                <p>
+                    The Chaudiere Falls and Islands, the sacred and peaceful Indigenous meeting place since time immemorial.<br>
+                    You recently disover an entrance to a cave that is located under the Chaudiere Falls.<br>
+                    Make your way to the cave and undergo a storytelling experience of 400 years worth of Indigenous history.<br>
+                    <br>
+                    Controls<br>
+                    - WASD keys for movement<br>
+                    - Move mouse for camera movement<br>
+                    - Left-click to interact<br>
+                </p>
+
+                <button id="user-gesture-button" onclick="startExperience();">Enter the Caves</button>
+            </div>
+        </div>
+
+        <a-scene start-experienece>
+            <a-assets timeout="1000">
+
+                <!-- Import models and other assets here -->
+
             </a-assets>
 
             <a-entity camera wasd-controls look-controls position="0 1.6 0">
                 <a-entity cursor="rayOrigin:mouse;" raycaster="far:20; interval:200; object:.interactive"></a-entity>
-                
-                <!-- Flashlight
-                    <a-entity light="type:spot; intensity:0.6; castShadow:true; shadowBias:-0.0005; angle:40; penumbra:1.0;" 
-                    position="0.5 -0.5 0" rotation="0 0 0"></a-entity> -->
-            </a-entity>
-
-            <a-entity>
-                <a-entity class = "color interactive"></a-entity>
-                <a-entity id="color_box" position="-1 2 -3"
-                geometry="primitive:box; width:1.0; height:1.0; depth:1.0" 
-                material="color:red;"></a-entity>
+                <a-entity light="type:spot; intensity:0.6; castShadow:true; shadowBias:-0.0005; angle:40; penumbra:1.0;" position="0.5 -0.5 0" rotation="0 0 0"></a-entity>
             </a-entity>
 
             <a-entity environment="preset:default"></a-entity>
-
         </a-scene>
     </body>
 </html>
