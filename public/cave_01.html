@@ -7,3 +7,67 @@
 <!--
     Cave Art 1 - Sky World: Thunderbird Story
 -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The Sacred Meeting Place</title>
+        <meta name="description" content="The Sacred Meeting Place, a WebVR storytelling experience.">
+        <script src="/js/aframe.min.js"></script>
+        <script src="/js/aframe-environment-component.min.js"></script>
+        <script src="/js/wall-interaction-1.js"></script>
+        <script src="/js/wall-interaction-2.js"></script>
+
+        <link rel="stylesheet" href="/css/user-gesture.css">
+    </head>
+    
+    <body>
+        <a-scene cave-one>
+            <a-assets timeout="1000">
+
+                <!-- Import models and other assets here -->
+
+            </a-assets>
+
+            <a-entity camera wasd-controls look-controls position="0 1.6 0">
+                <a-entity cursor="rayOrigin:mouse;" raycaster="far:20; interval:200; object:.interactive"></a-entity>
+                <a-entity light="type:spot; intensity:0.6; castShadow:true; shadowBias:-0.0005; angle:40; penumbra:1.0;" position="0.5 -0.5 0" rotation="0 0 0"></a-entity>
+            </a-entity>
+
+
+            <a-entity>
+                <a-entity class = "left_wall"></a-entity>
+                  <a-entity id="wall_plane" position="-1 2 -3"
+                  geometry="primitive:plane; width:10.0; height:10.0; depth:10.0;" 
+                  rotation="0 90 0;"
+                  material="color:grey;"></a-entity>
+              </a-entity>
+
+              <a-entity>
+                <a-entity class = "right_wall"></a-entity>
+                  <a-entity id="wall_plane" position="5 2 -3"
+                  geometry="primitive:plane; width:10.0; height:10.0; depth:10.0;" 
+                  rotation="0 -90 0;"
+                  material="color:grey;"></a-entity>
+              </a-entity>
+
+              <a-entity>
+                <a-entity class = "wall interactive 1"></a-entity>
+                  <a-entity id="wall_art1" wall-interaction-1 position="-0.9 2 -3"
+                  geometry="primitive:plane; width:1.0; height:1.0; depth:1.0;" 
+                  rotation="0 90 0;"
+                  material="color:black;"></a-entity>
+              </a-entity>
+
+              <a-entity>
+                <a-entity class = "wall interactive 2"></a-entity>
+                  <a-entity id="wall_art2" wall-interaction-2 position="4.9 2 -3"
+                  geometry="primitive:plane; width:1.0; height:1.0; depth:1.0;" 
+                  rotation="0 -90 0;"
+                  material="color:black;"></a-entity>
+              </a-entity>
+
+            <a-entity environment="preset:forest"></a-entity>
+        </a-scene>
+    </body>
+</html>
