@@ -58,10 +58,14 @@
 
         <a-scene start-experienece>
             <a-assets timeout="1000">
-
                 <!-- Import models and other assets here -->
 
+                <!-- Environment models -->
+                <a-asset-item id="low_poly_tree" response-type="arraybuffer" src="Assets/Lowpoly_tree_sample.obj"></a-asset-item>
+
             </a-assets>
+
+            <a-entity id="poly_tree" position="0 0 0" obj-model="#low_poly_tree"></a-entity>
 
             <a-entity camera wasd-controls look-controls position="0 1.6 0">
                 <a-entity cursor="rayOrigin:mouse;" raycaster="far:20; interval:200; object:.interactive"></a-entity>
