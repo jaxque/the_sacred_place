@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\public",
-    "\\public\\Assets"
+    "\\public\\Assets",
+    "\\public\\js"
   ],
-  "SelectedNode": "\\public\\Assets",
+  "SelectedNode": "\\public\\Assets\\blocky_rocks_scene.bin",
   "PreviewInSolutionExplorer": false
 }

@@ -62,7 +62,7 @@
                 <!-- Environment models -->
                 <!-- response-type="arraybuffer" -->
 
-                <a-asset-item id="giantTree" src="assets/giant_low_poly_tree.gltf"></a-asset-item>
+                <a-asset-item id="giantTree" src="assets/giant_low_poly_tree/scene.gltf"></a-asset-item>
                 <!--
         src="assets/blocky_rocks.gltf"
         src="assets/low_poly_rocks_pack.gltf"
@@ -73,7 +73,7 @@
     -->
             </a-assets>
 
-            <a-entity id="gTree" position="0 0 0" gltf-model="#giantTree"></a-entity>
+            <a-entity position="-10 0 5" size="0.25 0.25 0.25" gltf-model="#giantTree"></a-entity>
 
             <a-entity camera wasd-controls look-controls position="0 1.6 0">
                 <a-entity cursor="rayOrigin:mouse;" raycaster="far:20; interval:200; object:.interactive"></a-entity>
