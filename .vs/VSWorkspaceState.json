@@ -2,9 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\public",
-    "\\public\\Assets",
+    "\\public\\assets",
+    "\\public\\assets\\tree_low-poly",
     "\\public\\js"
   ],
-  "SelectedNode": "\\public\\Assets\\blocky_rocks_scene.bin",
+  "SelectedNode": "\\public\\assets\\low_poly_tree",
   "PreviewInSolutionExplorer": false
 }
