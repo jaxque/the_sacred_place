@@ -103,7 +103,7 @@
             <a-entity position="13 11 -70" scale="1 3 1" rotation="60 -90 40" gltf-model="#rockEntrance3"></a-entity>
             <a-entity position="13 0 -70" scale="1.5 3 1" rotation="0 200 0" gltf-model="#rockEntrance4"></a-entity>
             <!--Water to be added-->
-
+            <a-water position="0 0 0"></a-water>
             <!--Lead to cave 1-->
             <a-circle link="href: cave_01.html" id="caveEntrance" position="7 5 -75" radius="8.5" rotation="0 -40 0;" material="color:black;"></a-circle>
             <a-entity text="value: Click to enter cave;" position="8 5 -74" material="color:white;" rotation="0 -40 0" scale="5 5 5"></a-entity>
@@ -114,7 +114,7 @@
                 <a-entity light="type:spot; intensity:0.6; castShadow:true; shadowBias:-0.0005; angle:40; penumbra:1.0;" position="0.5 -0.5 0" rotation="0 0 0"></a-entity>
             </a-entity>
 
-            <!-- Move to correct location
+            <!-- Move to correct cave
             <a-entity>
                 <a-entity class="left_wall"></a-entity>
                 <a-entity id="wall_plane" position="-1 2 -3"
