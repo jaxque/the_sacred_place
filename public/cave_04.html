@@ -1,9 +1,62 @@
 <!--
     IMD3901B Design Studio 3 Winter 2022
     Term Project - The Sacred Meeting Place
-    Triple Peanuts - Angelina Belingan, Jacqueline Lee, Violet Nguyen 
+    Triple Peanuts - Angelina Belingan, Jacqueline Lee, Violet Nguyen
 -->
-
 <!--
     Cave Art 4 - How The Beaver Got His Tail
 -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The Sacred Meeting Place</title>
+    <meta name="description" content="The Sacred Meeting Place, a WebVR storytelling experience.">
+    <script src="/js/aframe.min.js"></script>
+    <script src="/js/aframe-environment-component.min.js"></script>
+
+    <link rel="stylesheet" href="/css/user-gesture.css">
+
+    <script>
+            AFRAME.registerComponent('start-experience', {
+                init: function() {
+                    console.log('scene loaded');
+                    document.querySelector('#user-gesture-button').style.display='block';
+                }
+            });
+
+            const startExperience = function() {
+                    // Hide user-gesture overlay
+                    document.querySelector('#user-gesture-overlay').style.display='none';
+
+                    //start ambient music
+                    const ambientSounds = document.querySelectorAll('.bgm');
+                    ambientSounds.forEach(function(soundEntity) {
+                    soundEntity.components.sound.playSound();
+                });
+                }
+    </script>
+</head>
+<body>
+    <a-scene>
+        <!-- Entrance to cave 5 -->
+        <a-circle position="0 0 -40" radius="10" color="black" link="href: cave_05.html"></a-circle>
+
+        <a-entity camera wasd-controls look-controls position="0 1.6 0">
+            <a-entity cursor="rayOrigin:mouse;" raycaster="far:20; interval:200; object:.interactive"></a-entity>
+            <a-entity light="type:spot; intensity:0.6; castShadow:true; shadowBias:-0.0005; angle:40; penumbra:1.0;" position="0.5 -0.5 0" rotation="0 0 0"></a-entity>
+        </a-entity>
+
+        <!-- Buttons to lead to main cave -->
+        <a-entity id="universal_button">
+            <a-entity class="button interactive" link="href: cave_01.html" ; position="0 0.6 0" geometry="primitive:cylinder; radius:0.15; height:0.2;" material="color:rgb(255, 100, 100)"
+                      animation__mouseenter="property:material.color; type:color; to:rgb(255, 0, 0); startEvents:mouseenter; dur:200"
+                      animation__mouseleave="property:material.color; type:color; to:rgb(255, 100, 100); startEvents:mouseleave; dur:200"
+                      animation__click="property:position.y; from:0.55; to:0.6; startEvents:click; dur:300" shadow></a-entity>
+            <a-entity position="0 0.3 0" geometry="primitive:box; width:0.5; depth:0.5; height:0.6;" material="color:rgb(255, 255, 255)" shadow></a-entity>
+        </a-entity>
+
+        <a-entity environment="preset:arches"></a-entity>
+    </a-scene>
+</body>
+</html>
