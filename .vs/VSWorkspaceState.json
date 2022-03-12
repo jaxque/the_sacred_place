@@ -2,10 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\public",
-    "\\public\\assets",
-    "\\public\\assets\\tree_low-poly",
-    "\\public\\js"
+    "\\public\\assets\\Textures"
   ],
-  "SelectedNode": "\\public\\assets\\low_poly_tree",
+  "SelectedNode": "\\public\\game.html",
   "PreviewInSolutionExplorer": false
 }
