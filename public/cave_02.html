@@ -10,34 +10,35 @@
 
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>The Sacred Meeting Place</title>
-            <meta name="description" content="The Sacred Meeting Place, a WebVR storytelling experience.">
-            <script src="/js/aframe.min.js"></script>
-            <script src="/js/aframe-environment-component.min.js"></script>
+<head>
+    <title>The Sacred Meeting Place</title>
+    <meta name="description" content="The Sacred Meeting Place, a WebVR storytelling experience.">
+    <script src="/js/aframe.min.js"></script>
+    <script src="/js/aframe-environment-component.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
 
-            <link rel="stylesheet" href="/css/user-gesture.css">
+    <link rel="stylesheet" href="/css/user-gesture.css">
 
-        <script>
-            AFRAME.registerComponent('start-experience', {
-                init: function() {
-                    console.log('scene loaded');
-                    document.querySelector('#user-gesture-button').style.display='block';
-                }
+    <script>
+        AFRAME.registerComponent('start-experience', {
+            init: function () {
+                console.log('scene loaded');
+                document.querySelector('#user-gesture-button').style.display = 'block';
+            }
+        });
+
+        const startExperience = function () {
+            // Hide user-gesture overlay
+            document.querySelector('#user-gesture-overlay').style.display = 'none';
+
+            //start ambient music
+            const ambientSounds = document.querySelectorAll('.bgm');
+            ambientSounds.forEach(function (soundEntity) {
+                soundEntity.components.sound.playSound();
             });
-
-            const startExperience = function() {
-                    // Hide user-gesture overlay
-                    document.querySelector('#user-gesture-overlay').style.display='none';
-
-                    //start ambient music
-                    const ambientSounds = document.querySelectorAll('.bgm');
-                    ambientSounds.forEach(function(soundEntity) {
-                    soundEntity.components.sound.playSound();
-                });
-                }
-        </script>
-    </head>
+        }
+    </script>
+</head>
     <body>
         <a-scene>
             <!-- Entrance to cave 3 -->
