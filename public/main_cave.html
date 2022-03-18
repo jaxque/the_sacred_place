@@ -32,10 +32,11 @@
 
             <!-- <a-sphere position="0 0 -35" radius="55" material="side:back; color:#774e24"></a-sphere> -->
             <a-cone position="0 10 -35" radius-bottom="55" radius-top="40" material="side:back; color:#774e24" height="50"></a-cone>
-            <!-- entrance to cave 2-->
-            <a-circle position="0 0 -80" radius="10" color="black" link="href: cave_02.html"></a-circle>
+            
+            <!-- entrance to cave 2 -->
+            <a-circle position="0 0 -80" radius="10" color="black" link="href: story_02.html"></a-circle>
 
-            <!-- where artwork is suppose to go -->
+            <!-- where artwork is supposed to go -->
             <a-cylinder id="artwork1" position="-30 0 -5" radius="1" height="2.5" color="grey"></a-cylinder>
             <a-entity>
                 <a-entity class="wall interactive 1"></a-entity>
@@ -57,7 +58,7 @@
             <a-cylinder id="artwork3" position="30 0 -5" radius="1" height="2.5" color="grey"></a-cylinder>
             <a-entity>
                 <a-entity class="wall interactive 3"></a-entity>
-                <a-entity id="wall_art1"  link="href: cave_02.html"; position="30 2 -5"
+                <a-entity id="wall_art1"  link="href: story_02.html"; position="30 2 -5"
                           geometry="primitive:plane; width:1.0; height:1.0; depth:1.0;"
                           rotation="0 -90 0;"
                           material="color:black;"></a-entity>
@@ -66,7 +67,7 @@
             <a-cylinder id="artwork4" position="30 0 -40" radius="1" height="2.5" color="grey"></a-cylinder>
             <a-entity>
                 <a-entity class="wall interactive 4"></a-entity>
-                <a-entity id="wall_art1" link="href: cave_03.html"; position="30 2 -40"
+                <a-entity id="wall_art1" link="href: story_03.html"; position="30 2 -40"
                           geometry="primitive:plane; width:1.0; height:1.0; depth:1.0;"
                           rotation="0 -90 0;"
                           material="color:black;"></a-entity>
@@ -120,7 +121,7 @@
             <!-- Artpiece leads to cave 2
       <a-entity>
         <a-entity class = "wall interactive 3"></a-entity>
-          <a-entity link="href: cave_02.html"; id="wall_art3" position="4.9 2 -1"
+          <a-entity link="href: story_02.html"; id="wall_art3" position="4.9 2 -1"
           geometry="primitive:plane; width:1.0; height:1.0; depth:1.0;"
           rotation="0 -90 0;"
           material="color:black;"></a-entity>
@@ -128,7 +129,7 @@
 
       <!-- Button to send the user back to the main cave
       <a-entity id="universal_button">
-        <a-entity class="button interactive" link="href: cave_03.html"; position="0 0.6 0" geometry="primitive:cylinder; radius:0.15; height:0.2;" material="color:rgb(255, 100, 100)"
+        <a-entity class="button interactive" link="href: main_cave.html"; position="0 0.6 0" geometry="primitive:cylinder; radius:0.15; height:0.2;" material="color:rgb(255, 100, 100)"
                   animation__mouseenter="property:material.color; type:color; to:rgb(255, 0, 0); startEvents:mouseenter; dur:200"
                   animation__mouseleave="property:material.color; type:color; to:rgb(255, 100, 100); startEvents:mouseleave; dur:200"
                   animation__click="property:position.y; from:0.55; to:0.6; startEvents:click; dur:300" shadow></a-entity>
