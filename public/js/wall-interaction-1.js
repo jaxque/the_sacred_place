@@ -35,7 +35,7 @@ AFRAME.registerComponent('wall-interaction-1', {
           width: 0.5,
           depth: 0.5
         });
-        entityBox.setAttribute('position', {x: 0.5, y: 2, z: -3});
+        entityBox.setAttribute('position', {x: -28, y: 2, z: -5});
         entityBox.setAttribute('material', 'color', 'red');
         entityBox.setAttribute('id', "pop_art");
       }
