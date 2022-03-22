@@ -40,7 +40,7 @@
     </script>
 </head>
     <body>
-        <a-scene>
+        <a-scene fog="type: linear; color: #000">
             <a-assets timeout="1000">
 
                 <!-- Import models and other assets here -->
@@ -50,45 +50,9 @@
             <!-- <a-sphere position="0 0 -35" radius="55" material="side:back; color:#774e24"></a-sphere> -->
             <a-cone position="0 10 -35" radius-bottom="55" radius-top="40" material="side:back; color:#774e24" height="50"></a-cone>
             
-            <!-- entrance to cave 3-->
+            <!-- entrance to cave 3
             <a-circle position="0 0 -80" radius="10" color="black" link="href: main_cave.html"></a-circle>
-
-            <!-- where artwork is suppose to go -->
-            <a-cylinder id="artwork1" position="-30 0 -5" radius="1" height="2.5" color="grey"></a-cylinder>
-            <a-entity>
-                <a-entity class="wall interactive 1"></a-entity>
-                <a-entity id="wall_art1" wall-interaction-1 position="-30 2 -5"
-                          geometry="primitive:plane; width:1.0; height:1.0; depth:1.0;"
-                          rotation="0 90 0;"
-                          material="color:black;"></a-entity>
-            </a-entity>
-
-            <a-cylinder id="artwork2" position="-30 0 -40" radius="1" height="2.5" color="grey"></a-cylinder>
-            <a-entity>
-                <a-entity class="wall interactive 2"></a-entity>
-                <a-entity id="wall_art1" wall-interaction-2 position="-30 2 -40"
-                          geometry="primitive:plane; width:1.0; height:1.0; depth:1.0;"
-                          rotation="0 90 0;"
-                          material="color:black;"></a-entity>
-            </a-entity>
-
-            <a-cylinder id="artwork3" position="30 0 -5" radius="1" height="2.5" color="grey"></a-cylinder>
-            <a-entity>
-                <a-entity class="wall interactive 3"></a-entity>
-                <a-entity id="wall_art1" wall-interaction-3 position="30 2 -5"
-                          geometry="primitive:plane; width:1.0; height:1.0; depth:1.0;"
-                          rotation="0 -90 0;"
-                          material="color:black;"></a-entity>
-            </a-entity>
-
-            <a-cylinder id="artwork4" position="30 0 -40" radius="1" height="2.5" color="grey"></a-cylinder>
-            <a-entity>
-                <a-entity class="wall interactive 4"></a-entity>
-                <a-entity id="wall_art1" wall-interaction-4 position="30 2 -40"
-                          geometry="primitive:plane; width:1.0; height:1.0; depth:1.0;"
-                          rotation="0 -90 0;"
-                          material="color:black;"></a-entity>
-            </a-entity>
+            -->
 
             <!-- Dripstone -->
             <a-cone position="0 30 0" radius-bottom="1" radius-top="0" height="10" rotation="180 0 0" color="brown"></a-cone>
@@ -96,8 +60,9 @@
 
             <a-cone position="-5 30 -70" radius-bottom="1" radius-top="0" height="10" rotation="180 0 0" color="brown"></a-cone>
 
-            <!-- Entrance to cave 3 -->
+            <!-- Entrance to cave 3
             <a-circle position="0 0 -40" radius="10" color="black" link="href: cave_03.html"></a-circle>
+             -->
 
             <a-entity camera wasd-controls look-controls position="0 1.6 0">
                 <a-entity cursor="rayOrigin:mouse;" raycaster="far:20; interval:200; object:.interactive"></a-entity>
