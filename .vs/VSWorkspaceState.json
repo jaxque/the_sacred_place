@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\public"
+    "\\public",
+    "\\public\\assets",
+    "\\public\\assets\\Cave_environment"
   ],
-  "SelectedNode": "\\public\\cave_02.html",
+  "SelectedNode": "\\public\\game.html",
   "PreviewInSolutionExplorer": false
 }
