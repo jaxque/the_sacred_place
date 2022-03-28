@@ -32,27 +32,36 @@ Make your way to the cave and undergo a storytelling experience of 400 years wor
 - A spring festival that involves snowmobile races and fishing competitions
 
 > Cave Art 4 - How The Beaver Got His Tail <
-1 - There was a muskrat whose house got flooded. It was nearly winter and the muskrat had no place to stay.
-2 - At the time, this muskrat had a tail like the beaver we see toady, except it wasn't flat on the ground but it was sticking up.
-3 - While the beaver had a small, skinny tail.
-4 - The muskrat went to seek the beaver for help. When the muskrat met the beaver, the beaver looked at the muskrat's tail.
-5 - "Why are you here? Why do you have such a nice big tail for an animal like you?", the beaver asked.
-6 - "There was a big flood and my house got flooded with water. Now I have no place to stay", the muskrat responded
-7 - "I will let you stay with me if you are willing to trade tails," the beaver offered.
-8 - The muskrat agreed, knowing he had no other choice if he didn't want to freeze in the winter.
-9 - The two rodents traded tails, now the beaver has the bigger tail.
-10 - This is the story of how the beaver got its tail.
+1 - This is the story of how the beaver got its tail.
+2 - There once was a muskrat whose house got flooded. 
+3 - It was nearly winter and the muskrat had no place to stay.
+4 - This muskrat had a tail like the beaver we see toady, except it wasn't flat on the ground but it was sticking up.
+5 - While the beaver had a small, skinny tail.
+6 - The muskrat went to seek the beaver for help. 
+7 - When the muskrat met the beaver, the beaver looked at the muskrat's tail.
+8 - "Why are you here? Why do you have such a nice big tail for an animal like you?", the beaver asked.
+9 - "There was a big flood and my house got flooded with water. Now I have no place to stay", the muskrat responded
+10 - "I will let you stay with me if you are willing to trade tails," the beaver offered.
+11 - The muskrat agreed, knowing he had no other choice if he didn't want to freeze in the winter.
+12 - The two rodents traded tails, now the beaver has the big flat tail in which we see today.
 
 > Cave Art 5 - Medicine Wheel Story <
-1 - The circle shape of the medicine wheel represents the stages of one's being and the connection with the natural world
-2 - East represents the stage of birth, the colour yellow, the spring season, and the physical state
-3 - South represents stage of teenagers, the colour red, the summer season, and the mental state
-4 - West represents the stage of adults, the colour black, the autumn season, and the emotional state
-5 - North: Elders, white, winter, spiritual
+1 - The medicine wheel represents the stages of one's being and the connection with the natural world
+2 - The medicine wheel has been used by generations of various Native American tribes for health and healing
+3 - It is represented as a circle in which consists of four directions: East, South, West, and North
+4 - The East represents the stage of birth, the colour yellow, the spring season, and the physical state
+5 - The South represents the stage of teenagers, the colour red, the summer season, and the mental state
+6 - The West represents the stage of adults, the colour black, the autumn season, and the emotional state
+7 - The North represents the stage of elders, the colour white, the winter season, and the spiritual state 
 
 
 > Sources <
+Thunderbird Story
 https://www.thecanadianencyclopedia.ca/en/article/thunderbird
 https://www.legendsofamerica.com/thunderbird-native-american/
 
+Naming Ceremony
 https://ecampusontario.pressbooks.pub/indigstudies/chapter/ceremonies-and-socials/
+
+Medicine Wheel Story
+https://www.nlm.nih.gov/nativevoices/exhibition/healing-ways/medicine-ways/medicine-wheel.html 
