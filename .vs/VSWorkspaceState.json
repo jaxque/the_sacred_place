@@ -2,9 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\public",
-    "\\public\\assets",
-    "\\public\\assets\\Cave_environment"
+    "\\public\\assets"
   ],
-  "SelectedNode": "\\public\\game.html",
+  "SelectedNode": "\\public\\credits.html",
   "PreviewInSolutionExplorer": false
 }
