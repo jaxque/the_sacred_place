@@ -50,7 +50,7 @@ Make your way to the cave and undergo a storytelling experience of 400 years wor
 2 - The medicine wheel has been used by generations of various Native American tribes for health and healing
 3 - It is represented as a circle in which consists of four directions: East, South, West, and North
 4 - The East represents the stage of birth, the colour yellow, the spring season, and the physical state
-5 - The South represents the stage of teenagers, the colour red, the summer season, and the mental state
+5 - The South represents the stage of teenagers , the colour red, the summer season, and the mental state
 6 - The West represents the stage of adults, the colour black, the autumn season, and the emotional state
 7 - The North represents the stage of elders, the colour white, the winter season, and the spiritual state 
 
