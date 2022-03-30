@@ -39,7 +39,27 @@
     </script>
 </head>
 <body>
-    <a-scene>
+    <a-scene fog="type: linear; color: #000">
+        <a-assets timeout="1000">
+
+            <!-- Import models and other assets here -->
+            
+            <!-- Import narration audio -->
+            <audio src="/assets/Audio/narration/beaver_story_01.mp3" preload="auto" crossorigin="anonymous"></audio>
+            <audio src="/assets/Audio/narration/beaver_story_02.mp3" preload="auto" crossorigin="anonymous"></audio>
+            <audio src="/assets/Audio/narration/beaver_story_03.mp3" preload="auto" crossorigin="anonymous"></audio>
+            <audio src="/assets/Audio/narration/beaver_story_04.mp3" preload="auto" crossorigin="anonymous"></audio>
+            <audio src="/assets/Audio/narration/beaver_story_05.mp3" preload="auto" crossorigin="anonymous"></audio>
+            <audio src="/assets/Audio/narration/beaver_story_06.mp3" preload="auto" crossorigin="anonymous"></audio>
+            <audio src="/assets/Audio/narration/beaver_story_07.mp3" preload="auto" crossorigin="anonymous"></audio>
+            <audio src="/assets/Audio/narration/beaver_story_08.mp3" preload="auto" crossorigin="anonymous"></audio>
+            <audio src="/assets/Audio/narration/beaver_story_09.mp3" preload="auto" crossorigin="anonymous"></audio>
+            <audio src="/assets/Audio/narration/beaver_story_10.mp3" preload="auto" crossorigin="anonymous"></audio>
+            <audio src="/assets/Audio/narration/beaver_story_11.mp3" preload="auto" crossorigin="anonymous"></audio>
+            <audio src="/assets/Audio/narration/beaver_story_12.mp3" preload="auto" crossorigin="anonymous"></audio>
+
+        </a-assets>
+
         <!-- Entrance to cave 5 -->
         <a-circle position="0 0 -40" radius="10" color="black" link="href: main_cave.html"></a-circle>
 
