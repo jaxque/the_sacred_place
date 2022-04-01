@@ -44,7 +44,11 @@
             <a-assets timeout="1000">
 
                 <!-- Import models and other assets here -->
-                
+                <a-assets-item id="person" src="assets/Person/scene.gltf"></a-assets-item>
+                <a-assets-item id="flatRock" src="assets/flat-rock/scene.gltf"></a-assets-item>
+                <a-assets-item id="logs" src="assets/logs/scene.gltf"></a-assets-item>
+                <img id="dirt" src="assets/dirt.jpg">
+
                 <!-- Import narration audio -->
                 <audio src="/assets/Audio/narration/naming_ceremony_01.mp3" preload="auto" crossorigin="anonymous"></audio>
                 <audio src="/assets/Audio/narration/naming_ceremony_02.mp3" preload="auto" crossorigin="anonymous"></audio>
@@ -53,17 +57,54 @@
                 <audio src="/assets/Audio/narration/naming_ceremony_05.mp3" preload="auto" crossorigin="anonymous"></audio>
 
             </a-assets>
-            
 
-            <!-- <a-sphere position="0 0 -35" radius="55" material="side:back; color:#774e24"></a-sphere> -->
-          
-            <!-- entrance to cave 3
-            <a-circle position="0 0 -80" radius="10" color="black" link="href: main_cave.html"></a-circle>
+            <a-circle position="0 0.01 0" radius="8" rotation="-90 0 0" src="#dirt"></a-circle> 
+            <!-- People -->
+            <a-entity position="0 0 -8" scale="0.015 0.015 0.015" gltf-model="#person"></a-entity>
+            <a-entity position="0 0 8" rotation="0 180 0" scale="0.015 0.015 0.015" gltf-model="#person"></a-entity>
+
+            <a-entity position="-8 0 0" rotation="0 90 0" scale="0.015 0.015 0.015" gltf-model="#person"></a-entity>
+            <a-entity position="8 0 0" rotation="0 -90 0" scale="0.015 0.015 0.015" gltf-model="#person"></a-entity>
+
+            <a-entity position="5.5 0 -5.5" rotation="0 -45 0" scale="0.015 0.015 0.015" gltf-model="#person"></a-entity>
+            <a-entity position="-5.5 0 5.5" rotation="0 135 0" scale="0.015 0.015 0.015" gltf-model="#person"></a-entity>
+
+            <a-entity position="-5.5 0 -5.5" rotation="0 45 0" scale="0.015 0.015 0.015" gltf-model="#person"></a-entity>
+            <a-entity position="5.5 0 5.5" rotation="0 -135 0" scale="0.015 0.015 0.015" gltf-model="#person"></a-entity>
+
+            <!-- Rocks -->
+            <!-- North -->
+            <a-entity position="-1 0 3" scale="2 2 2" gltf-model="#flatRock"></a-entity>
+            <a-entity position="1 0 3" scale="2 2 2" rotation="0 25 0" gltf-model="#flatRock"></a-entity>
+            <a-entity position="-3 0 2.5" scale="2 2 2" rotation="0 -25 0" gltf-model="#flatRock"></a-entity>
+
+            <!-- West -->
+            <a-entity position="3 0 1" scale="2 2 2" rotation="0 90 0" gltf-model="#flatRock"></a-entity>
+            <a-entity position="3 0 -1" scale="2 2 2" rotation="0 115 0" gltf-model="#flatRock"></a-entity>
+            <a-entity position="2.5 0 2.5" scale="2 2 2" rotation="0 65 0" gltf-model="#flatRock"></a-entity>
+
+            <!-- East -->
+            <a-entity position="-3 0 -1" scale="2 2 2" rotation="0 -90 0" gltf-model="#flatRock"></a-entity>
+            <a-entity position="-2.5 0 -3" scale="2 2 2" rotation="0 -115 0" gltf-model="#flatRock"></a-entity>
+            <a-entity position="-3 0 1" scale="2 2 2" rotation="0 -65 0" gltf-model="#flatRock"></a-entity>
+
+            <!-- South -->
+            <a-entity position="1 0 -3" scale="2 2 2" rotation="0 180 0" gltf-model="#flatRock"></a-entity>
+            <a-entity position="-1 0 -3" scale="2 2 2" rotation="0 205 0" gltf-model="#flatRock"></a-entity>
+            <a-entity position="3 0 -2.5" scale="2 2 2" rotation="0 155 0" gltf-model="#flatRock"></a-entity>
+
+            <!-- Logs 
+            <a-entity position="10 0 -10" scale="0.01 0.01 0.01" rotation="0 45 0" gltf-model="#logs"></a-entity> 
             -->
 
+
+            <!-- <a-sphere position="0 0 -35" radius="55" material="side:back; color:#774e24"></a-sphere> -->
+            <!-- entrance to cave 3
+    <a-circle position="0 0 -80" radius="10" color="black" link="href: main_cave.html"></a-circle>
+    -->
             <!-- Entrance to cave 3
-            <a-circle position="0 0 -40" radius="10" color="black" link="href: cave_03.html"></a-circle>
-             -->
+    <a-circle position="0 0 -40" radius="10" color="black" link="href: cave_03.html"></a-circle>
+     -->
 
             <a-entity camera wasd-controls look-controls position="0 1.6 0">
                 <a-entity cursor="rayOrigin:mouse;" raycaster="far:20; interval:200; object:.interactive"></a-entity>
