@@ -19,6 +19,7 @@
     <script src="/js/wall-interaction-2.js"></script>
     <script src="/js/thunderbird.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+    <script src="/js/aframe-particle-system-component.js"></script>
 
     <link rel="stylesheet" href="/css/user-gesture.css">
 </head>
@@ -52,25 +53,27 @@
                 <a-entity light="type:spot; intensity:0.6; castShadow:true; shadowBias:-0.0005; angle:40; penumbra:1.0;" position="0.5 -0.5 0" rotation="0 0 0"></a-entity>
             </a-entity>
 
-            <!-- environment -->
-            <a-entity environment="preset:forest; ground:flat; dressingAmount:100"></a-entity>
+            <!-- environment (need to change sky colour to see the rain)-->
+            <a-entity environment="preset:forest; ground:flat; dressingAmount:100"></a-entity>            
+
             <!-- whale -->
-            <a-entity position="10 10 -25" scale="2 2 2" rotation="0 -90 0" gltf-model="#Whale"></a-entity>
+            <a-entity position="10 10 -25" scale="1 1 1" rotation="0 -90 0" gltf-model="#Whale"></a-entity>
 
             <!-- Panther -->
-            <a-entity position="-20 5 -15" scale="10 10 10" rotation="0 0 0" gltf-model="#Panther"></a-entity>
+            <a-entity position="-20 2.5 -15" scale="5 5 5" rotation="0 0 0" gltf-model="#Panther"></a-entity>
 
             <!-- Snake -->
-            <a-entity position="30 0 -10" scale="2 2 2" rotation="0 0 0" gltf-model="#Snake"></a-entity>
+            <a-entity position="30 0 -10" scale="1 1 1" rotation="0 0 0" gltf-model="#Snake"></a-entity>
 
+            <!-- door to main cave -->
             <a-plane position="0 0 -20" height="7" width="2" color="black" link="href: main_cave.html"></a-plane>
 
             <!-- add thunder storm sound effects -->
             <a-sound src="assets/Audio/sound_effects/thunder_01.wav" autoplay="true" loop="true"></a-sound>
 
             <!-- makes storm appear
-        (doesnt do anything yet)
-    -->
+                (doesnt do anything yet)
+            -->
             <a-entity id="storm_button" position="-1 0 0">
                 <a-entity class="button interactive" ; position="0 0.6 0" geometry="primitive:cylinder; radius:0.15; height:0.2;" material="color:rgb(100, 100, 255)"
                           animation__mouseenter="property:material.color; type:color; to:rgb(0, 0, 255); startEvents:mouseenter; dur:200"
@@ -80,7 +83,20 @@
             </a-entity>
 
             <!-- added a particle system component for rain (doesnt work yet) -->
-            <a-entity id="rain" position="0 0 0" particle-system="preset: rain"></a-entity>
+            <a-assets>
+                <img id="raindrop" src="https://cdn.glitch.global/a12af6de-b341-4b3a-8ddc-87007b4c52af/raindrop.png?v=1648672291940" crossorigin="anonymous">
+            </a-assets>
+              
+              <a-entity position="0 2.25 -15" particle-system="  maxAge:1;
+                                                                 positionSpread:100 100 100; 
+                                                                 rotationAngle:3.4; 
+                                                                 accelerationValue:0 3 0;
+                                                                 accelerationSpread:2 1 2;
+                                                                 velocityValue:0 75 0;
+                                                                 velocitySpread:10 50 10;
+                                                                 color: #FFFFFF;
+                                                                 size:0.1;
+                                                                 texture:https://cdn.glitch.global/a12af6de-b341-4b3a-8ddc-87007b4c52af/raindrop.png?v=1648672291940;"></a-entity>
 
 
             <!-- makes thunderbird appear -->
@@ -92,15 +108,11 @@
                 <a-entity position="0 0.3 0" geometry="primitive:box; width:0.5; depth:0.5; height:0.6;" material="color:rgb(255, 255, 255)" shadow></a-entity>
             </a-entity>
 
-            <!-- placeholder for the thunderbird ---- appears when you click on the button
-    - orbits around a sphere that is hidden underground -->
             <!-- thunderbird -->
-            <a-entity position="-5 25 -30" scale="0.05 0.05 0.05" gltf-model="#Thunderbird"></a-entity>
-
             <a-entity id="orbitPoint">
-                <a-sphere position="0 -2 0" rotation="0 0 0" color="grey" animation="property: rotation; to: 0 360 0 ; loop: true; dur: 10000" rotation="0 0 0">
+                <a-sphere position="0 -2 0" rotation="0 0 0" color="grey" animation="property: rotation; to: 0 -360 0 ; loop: true; dur: 8000" rotation="0 0 0">
                     <a-entity id="thunderbird" visible="false">
-                        <a-box position="15 15 0" color="red"></a-box>
+                        <a-entity position="-5 25 -30" scale="0.03 0.03 0.03" gltf-model="#Thunderbird"></a-entity>
                     </a-entity>
                 </a-sphere>
             </a-entity>
