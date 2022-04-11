@@ -18,6 +18,8 @@
     <script src="/js/wall-interaction-1.js"></script>
     <script src="/js/wall-interaction-2.js"></script>
     <script src="/js/thunderbird.js"></script>
+    <script src="/js/rain-appear.js"></script>
+
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
     <script src="/js/aframe-particle-system-component.js"></script>
     
@@ -94,7 +96,7 @@
             <!-- makes storm appear
                 (doesnt do anything yet)
             -->
-            <a-entity id="storm_button" position="-1 0 0">
+            <a-entity id="storm_button" rain-appear position="-1 0 0">
                 <a-entity class="button interactive" ; position="0 0.6 0" geometry="primitive:cylinder; radius:0.15; height:0.2;" material="color:rgb(100, 100, 255)"
                           animation__mouseenter="property:material.color; type:color; to:rgb(0, 0, 255); startEvents:mouseenter; dur:200"
                           animation__mouseleave="property:material.color; type:color; to:rgb(100, 100, 255); startEvents:mouseleave; dur:200"
@@ -107,7 +109,7 @@
                 <img id="raindrop" src="https://cdn.glitch.global/a12af6de-b341-4b3a-8ddc-87007b4c52af/raindrop.png?v=1648672291940" crossorigin="anonymous">
             </a-assets>
               
-              <a-entity position="0 2.25 -15" particle-system="  maxAge:1;
+              <a-entity id="rain-system" position="0 2.25 -15" particle-system="  maxAge:1;
                                                                  positionSpread:100 100 100; 
                                                                  rotationAngle:3.4; 
                                                                  accelerationValue:0 3 0;
@@ -120,7 +122,7 @@
 
 
             <!-- makes thunderbird appear -->
-            <a-entity id="thunderbird_button" onclick="startNarration();">
+            <a-entity id="thunderbird_button">
                 <a-entity class="button interactive" thunderbird-appear; position="0 0.6 0" geometry="primitive:cylinder; radius:0.15; height:0.2;" material="color:rgb(255, 100, 100)"
                           animation__mouseenter="property:material.color; type:color; to:rgb(255, 0, 0); startEvents:mouseenter; dur:200"
                           animation__mouseleave="property:material.color; type:color; to:rgb(255, 100, 100); startEvents:mouseleave; dur:200"
