@@ -1,0 +1,38 @@
+/*
+    IMD3901B Design Studio 3 Winter 2022
+    Term Project - The Sacred Meeting Place
+    Triple Peanuts - Angelina Belingan, Jacqueline Lee, Violet Nguyen
+*/
+
+h1 {
+    font-size: 36px;
+    margin: 10px;
+    padding: 5px 5px;
+}
+
+h2 {
+    margin: 10px;
+    padding: 5px 5px;
+}
+
+p {
+    font-family: 'Trebuchet MS';
+    margin: 10px;
+    padding: 5px 5px;
+}
+
+.button-group button {
+    background-color:rgb(250, 226, 190);
+    font-size: 18px;
+    border: 1px solid black;
+    color: black;
+    margin: 15px 15px;
+    padding: 15px 15px;
+    cursor: pointer;
+    width: 20%;
+    display: block;
+}
+
+.button-group button:hover {
+    background-color:rgb(226, 195, 115);
+}

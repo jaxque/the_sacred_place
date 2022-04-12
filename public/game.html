@@ -42,9 +42,6 @@
         
         <div id="user-gesture-overlay">
             <div class="center">
-                <a-scene>
-                    <a-sound src="sacred_place_intro.mp3" autoplay="true" position="0 0 0"></a-sound>
-                </a-scene>
                 <!-- Brief introduction -->
                 <p>
                     The Chaudiere Falls and Islands, the sacred and peaceful Indigenous meeting place since time immemorial.<br>
@@ -63,6 +60,12 @@
 
         <a-scene id="start-experience">
             <a-assets timeout="10000">
+                <!-- <audio id="intro" src="assets/Audio/narration/sacred_place_intro.mp3" preload="auto"></audio>
+                <a-entity sound="src: #intro"></a-entity> -->
+               
+                <!--  -->
+                <a-sound src="assets/Audio/narration/sacred_place_intro.mp3" autoplay="true" volume="80" position="0 0 0"></a-sound>
+                
                 <!-- Environment models -->
                 <!--Trees-->
                 <a-asset-item id="giantTree" src="assets/giant_low_poly_tree/scene.gltf"></a-asset-item>
