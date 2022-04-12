@@ -41,6 +41,20 @@
                 <img id="wheelImage_02" src="\assets\wheel_02.png">
                 <img id="wheelImage_03" src="\assets\wheel_03.png">
 
+                <img id="beaverImage_01" src="\assets\beaver_story_art\beaver_art_01.png">
+                <img id="beaverImage_02" src="\assets\beaver_story_art\beaver_art_02.png">
+                <img id="beaverImage_03" src="\assets\beaver_story_art\beaver_art_03.png">
+                <img id="beaverImage_04" src="\assets\beaver_story_art\beaver_art_04.png">
+                <img id="beaverImage_05" src="\assets\beaver_story_art\beaver_art_05.png">
+                <img id="beaverImage_06" src="\assets\beaver_story_art\beaver_art_06.png">
+                <img id="beaverImage_07" src="\assets\beaver_story_art\beaver_art_07.png">
+                <img id="beaverImage_08" src="\assets\beaver_story_art\beaver_art_08.png">
+                <img id="beaverImage_09" src="\assets\beaver_story_art\beaver_art_09.png">
+                <img id="beaverImage_10" src="\assets\beaver_story_art\beaver_art_10.png">
+                <img id="beaverImage_11" src="\assets\beaver_story_art\beaver_art_11.png">
+                <img id="beaverImage_12" src="\assets\beaver_story_art\beaver_art_12.png">
+                
+
                 <!-- Import narration audio Beaver Story -->
                 <audio id="beaver_01" src="\assets\Audio\narration\Beaver Story\beaver_story_01.mp3" preload="auto" volume="1"></audio>
                 <audio id="beaver_02" src="\assets\Audio\narration\Beaver Story\beaver_story_02.mp3" preload="auto" crossorigin="anonymous"></audio>
@@ -127,15 +141,59 @@
             <a-cylinder id="artwork2" position="-30 0 -40" radius="1" height="2.5" color="grey"></a-cylinder>
             <a-entity>
                 <a-entity class="wall interactive 2"></a-entity>
-                <a-entity id="wall_art1" wall-interaction-2 position="-30 2 -40"
+                <a-image  src="#beaverImage_01" position="-30 2 -40" rotation="0 90 0;"
+                  beaver-02-appear
                   sound="src: #beaver_01"
                   play-sound-on-event="mode: toggle-stop; event: click"
-                          geometry="primitive:plane; width:1.0; height:1.0; depth:1.0;"
-                          rotation="0 90 0;"
-                          src="#Beaver"></a-entity>
-                <a-entity position="-30 2 -45" geometry="primitive:plane; width:1.0; height:1.0; depth:1.0;"
-                          rotation="0 90 0;"
-                          src="#Muskrat"></a-entity>
+                ></a-image>
+            </a-entity>
+
+            <a-entity id="Beaver_02" visible="false">
+              <a-image  src="#beaverImage_02" position="-30 3 -36" rotation="0 90 0;"
+                  sound="src: #beaver_02"
+                  play-sound-on-event="mode: toggle-stop; event: click"
+              ></a-image>
+              <a-image  src="#beaverImage_03" position="-30 2 -36" rotation="0 90 0;"
+                  sound="src: #beaver_03"
+                  play-sound-on-event="mode: toggle-stop; event: click"
+              ></a-image>
+              <a-image  src="#beaverImage_04" position="-30 1 -36" rotation="0 90 0;"
+                  sound="src: #beaver_04"
+                  play-sound-on-event="mode: toggle-stop; event: click"
+              ></a-image>
+              <a-image  src="#beaverImage_05" position="-30 3 -38" rotation="0 90 0;"
+                  sound="src: #beaver_05"
+                  play-sound-on-event="mode: toggle-stop; event: click"
+              ></a-image>
+              <a-image  src="#beaverImage_06" position="-30 2 -38" rotation="0 90 0;"
+                  sound="src: #beaver_06"
+                  play-sound-on-event="mode: toggle-stop; event: click"
+              ></a-image>
+              <a-image  src="#beaverImage_07" position="-30 1 -38" rotation="0 90 0;"
+                  sound="src: #beaver_07"
+                  play-sound-on-event="mode: toggle-stop; event: click"
+              ></a-image>
+              <a-image  src="#beaverImage_08" position="-30 3 -42" rotation="0 90 0;"
+                  sound="src: #beaver_08"
+                  play-sound-on-event="mode: toggle-stop; event: click"
+              ></a-image>
+              <a-image  src="#beaverImage_09" position="-30 2 -42" rotation="0 90 0;"
+                  sound="src: #beaver_09"
+                  play-sound-on-event="mode: toggle-stop; event: click"
+              ></a-image>
+              <a-image  src="#beaverImage_10" position="-30 1 -42" rotation="0 90 0;"
+                  sound="src: #beaver_10"
+                  play-sound-on-event="mode: toggle-stop; event: click"
+              ></a-image>
+              <a-image  src="#beaverImage_11" position="-30 3 -44" rotation="0 90 0;"
+                  sound="src: #beaver_11"
+                  play-sound-on-event="mode: toggle-stop; event: click"
+              ></a-image>
+              <a-image  src="#beaverImage_12" position="-30 2 -44" rotation="0 90 0;"
+                  sound="src: #beaver_12"
+                  play-sound-on-event="mode: toggle-stop; event: click"
+              ></a-image>
+
             </a-entity>
 
             <!-- Naming Ceremony -->
