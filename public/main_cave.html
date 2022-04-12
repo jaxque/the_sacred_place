@@ -29,6 +29,9 @@
 
                 <!-- Import models and other assets here -->
                 <img id="cave-texture" src="Textures/cave-texture.jpg">
+                <img id="Muskrat" src="assets/CaveArt/CaveArt_MR.png">
+                <img id="Beaver" src="assets/CaveArt/CaveArt_B.png">
+                <img id="MedicineWheel" src="assets/CaveArt/CaveArt_MW.png">
 
                 <!-- Import narration audio Beaver Story -->
                 <audio id="beaver_01" src="\assets\Audio\narration\Beaver Story\beaver_story_01.mp3" preload="auto" volume="1"></audio>
@@ -70,7 +73,7 @@
                   play-sound-on-event="mode: toggle-stop; event: click"
                           geometry="primitive:plane; width:1.0; height:1.0; depth:1.0;"
                           rotation="0 90 0;"
-                          material="color:black;"></a-entity>
+                          src="#MedicineWheel"></a-entity>
             </a-entity>
 
             <a-cylinder id="artwork2" position="-30 0 -40" radius="1" height="2.5" color="grey"></a-cylinder>
@@ -81,7 +84,10 @@
                   play-sound-on-event="mode: toggle-stop; event: click"
                           geometry="primitive:plane; width:1.0; height:1.0; depth:1.0;"
                           rotation="0 90 0;"
-                          material="color:black;"></a-entity>
+                          src="#Beaver"></a-entity>
+                <a-entity position="-30 2 -45" geometry="primitive:plane; width:1.0; height:1.0; depth:1.0;"
+                          rotation="0 90 0;"
+                          src="#Muskrat"></a-entity>
             </a-entity>
 
             <a-cylinder id="artwork3" position="30 0 -5" radius="1" height="2.5" color="grey"></a-cylinder>
