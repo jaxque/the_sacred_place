@@ -15,7 +15,11 @@
     <meta name="description" content="The Sacred Meeting Place, a WebVR storytelling experience.">
     <script src="/js/aframe.min.js"></script>
     <script src="/js/aframe-environment-component.min.js"></script>
-    <script src="/js/wall-interaction-1.js"></script>
+
+    <script src="/js/medicine-wheel-02.js"></script>
+    <script src="/js/medicine-wheel-03.js"></script>
+    <script src="/js/medicine-wheel-04.js"></script>
+
     <script src="/js/wall-interaction-2.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
     <script src="https://unpkg.com/aframe-play-sound-on-event@1.0.2/dist/aframe-play-sound-on-event.min.js"></script>
@@ -32,6 +36,10 @@
                 <img id="Muskrat" src="assets/CaveArt/CaveArt_MR.png">
                 <img id="Beaver" src="assets/CaveArt/CaveArt_B.png">
                 <img id="MedicineWheel" src="assets/CaveArt/CaveArt_MW.png">
+
+                <img id="wheelImage_01" src="\assets\wheel_01.png">
+                <img id="wheelImage_02" src="\assets\wheel_02.png">
+                <img id="wheelImage_03" src="\assets\wheel_03.png">
 
                 <!-- Import narration audio Beaver Story -->
                 <audio id="beaver_01" src="\assets\Audio\narration\Beaver Story\beaver_story_01.mp3" preload="auto" volume="1"></audio>
@@ -64,17 +72,57 @@
             <!-- entrance to cave 2 -->
             <a-circle position="0 0 -80" radius="10" color="black" link="href: story_02.html"></a-circle>
 
-            <!-- where artwork is supposed to go -->
+            <!-- Medicine Wheel -->
             <a-cylinder id="artwork1" position="-30 0 -5" radius="1" height="2.5" color="grey"></a-cylinder>
             <a-entity>
                 <a-entity class="wall interactive 1"></a-entity>
-                <a-entity id="wall_art1" wall-interaction-1 position="-30 2 -5"
+                <a-image id="MedicineWheel_01" src="#wheelImage_01" position="-30 2 -5" rotation="0 90 0;"
+                  wheel-02-appear 
                   sound="src: #wheel_01"
                   play-sound-on-event="mode: toggle-stop; event: click"
-                          geometry="primitive:plane; width:1.0; height:1.0; depth:1.0;"
-                          rotation="0 90 0;"
-                          src="#MedicineWheel"></a-entity>
+                ></a-image>
             </a-entity>
+
+            <a-entity id="MedicineWheel_02" visible="false">
+              <a-image  src="#wheelImage_02" position="-29 2 0" rotation="0 90 0;"
+                wheel-03-appear
+                sound="src: #wheel_02"
+                play-sound-on-event="mode: toggle-stop; event: click"
+              ></a-image>
+          </a-entity>
+
+          <a-entity id="MedicineWheel_03" visible="false">
+            <a-image  src="#wheelImage_03" position="-29 2 -3" rotation="0 90 0;"
+              wheel-04-appear
+              sound="src: #wheel_03"
+              play-sound-on-event="mode: toggle-stop; event: click"
+            ></a-image>
+          </a-entity>
+
+          <a-entity id="MedicineWheel_04" visible="false">
+            <a-entity
+              sound="src: #wheel_04"
+              play-sound-on-event="mode: toggle-stop; event: click"
+              geometry="primitive: sphere; radius: 0.5;" material="color:yellow" position="-29 2 -11">
+            </a-entity>
+            <a-entity
+              sound="src: #wheel_05"
+              play-sound-on-event="mode: toggle-stop; event: click"
+              geometry="primitive: sphere; radius: 0.5;" material="color:red" position="-29 1 -9.5">
+            </a-entity>
+            <a-entity
+              sound="src: #wheel_06"
+              play-sound-on-event="mode: toggle-stop; event: click"
+              geometry="primitive: sphere; radius: 0.5;" material="color:black" position="-29 2 -8">
+            </a-entity>
+            <a-entity
+              sound="src: #wheel_07"
+              play-sound-on-event="mode: toggle-stop; event: click"
+              geometry="primitive: sphere; radius: 0.5;" material="color:white" position="-29 3 -9.5">
+            </a-entity>
+          </a-entity>
+
+        <!-- Beaver Story -->
 
             <a-cylinder id="artwork2" position="-30 0 -40" radius="1" height="2.5" color="grey"></a-cylinder>
             <a-entity>
@@ -90,6 +138,8 @@
                           src="#Muskrat"></a-entity>
             </a-entity>
 
+            <!-- Naming Ceremony -->
+
             <a-cylinder id="artwork3" position="30 0 -5" radius="1" height="2.5" color="grey"></a-cylinder>
             <a-entity>
                 <a-entity class="wall interactive 3"></a-entity>
@@ -99,6 +149,7 @@
                           material="color:black;"></a-entity>
             </a-entity>
 
+            <!-- Thunderbird -->
             <a-cylinder id="artwork4" position="30 0 -40" radius="1" height="2.5" color="grey"></a-cylinder>
             <a-entity>
                 <a-entity class="wall interactive 4"></a-entity>
