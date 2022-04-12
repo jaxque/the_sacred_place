@@ -3,9 +3,11 @@
     "",
     "\\public",
     "\\public\\assets",
+    "\\public\\assets\\CaveArt",
+    "\\public\\assets\\Cave_environment",
     "\\public\\assets\\dirt",
     "\\public\\assets\\Sticks"
   ],
-  "SelectedNode": "\\public\\assets\\Sticks",
+  "SelectedNode": "\\public\\main_cave.html",
   "PreviewInSolutionExplorer": false
 }
