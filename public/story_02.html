@@ -17,6 +17,7 @@
     <script src="/js/aframe-environment-component.min.js"></script>
     <script src="/js/naming-ceremony-spirits.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+    <script src="https://unpkg.com/aframe-play-sound-on-event@1.0.2/dist/aframe-play-sound-on-event.min.js"></script>
 
     <link rel="stylesheet" href="/css/user-gesture.css">
 
@@ -57,7 +58,10 @@
                 <audio src="/assets/Audio/narration/naming_ceremony_04.mp3" preload="auto" crossorigin="anonymous"></audio>
                 <audio src="/assets/Audio/narration/naming_ceremony_05.mp3" preload="auto" crossorigin="anonymous"></audio>
 
+                <audio id="ojibwe_song" src="assets\Audio\sound_effects\ojibwe_trad_song.mp3"></audio>
+
             </a-assets>
+
 
             <a-circle position="0 0.01 0" radius="8" rotation="-90 0 0" src="#dirt"></a-circle> 
 
@@ -81,10 +85,13 @@
 
             <!-- makes people appear -->
             <a-entity id="spirits_button">
-                <a-entity class="button interactive" spirits-appear ; position="0 0.6 0" geometry="primitive:cylinder; radius:0.15; height:0.2;" material="color:rgb(255, 100, 100)"
-                          animation__mouseenter="property:material.color; type:color; to:rgb(255, 0, 0); startEvents:mouseenter; dur:200"
-                          animation__mouseleave="property:material.color; type:color; to:rgb(255, 100, 100); startEvents:mouseleave; dur:200"
-                          animation__click="property:position.y; from:0.55; to:0.6; startEvents:click; dur:300" shadow></a-entity>
+                <a-entity class="button interactive" spirits-appear ; position="0 0.6 0" 
+                    sound="src: #ojibwe_song"
+                    play-sound-on-event="mode: toggle-stop; event: click"
+                    geometry="primitive:cylinder; radius:0.15; height:0.2;" material="color:rgb(255, 100, 100)"
+                    animation__mouseenter="property:material.color; type:color; to:rgb(255, 0, 0); startEvents:mouseenter; dur:200"
+                    animation__mouseleave="property:material.color; type:color; to:rgb(255, 100, 100); startEvents:mouseleave; dur:200"
+                    animation__click="property:position.y; from:0.55; to:0.6; startEvents:click; dur:300" shadow></a-entity>
                 <a-entity position="0 0.3 0" geometry="primitive:box; width:0.5; depth:0.5; height:0.6;" material="color:rgb(255, 255, 255)" shadow></a-entity>
             </a-entity>
 
@@ -112,15 +119,6 @@
             <!-- Logs 
             <a-entity position="10 0 -10" scale="0.01 0.01 0.01" rotation="0 45 0" gltf-model="#logs"></a-entity> 
             -->
-
-
-            <!-- <a-sphere position="0 0 -35" radius="55" material="side:back; color:#774e24"></a-sphere> -->
-            <!-- entrance to cave 3
-    <a-circle position="0 0 -80" radius="10" color="black" link="href: main_cave.html"></a-circle>
-    -->
-            <!-- Entrance to cave 3
-    <a-circle position="0 0 -40" radius="10" color="black" link="href: cave_03.html"></a-circle>
-     -->
 
             <a-entity camera wasd-controls look-controls position="0 1.6 0">
                 <a-entity cursor="rayOrigin:mouse;" raycaster="far:20; interval:200; object:.interactive"></a-entity>

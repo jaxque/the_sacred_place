@@ -18,6 +18,7 @@
     <script src="/js/wall-interaction-1.js"></script>
     <script src="/js/wall-interaction-2.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+    <script src="https://unpkg.com/aframe-play-sound-on-event@1.0.2/dist/aframe-play-sound-on-event.min.js"></script>
 
     <link rel="stylesheet" href="/css/user-gesture.css">
 </head>
@@ -28,6 +29,30 @@
 
                 <!-- Import models and other assets here -->
                 <img id="cave-texture" src="Textures/cave-texture.jpg">
+
+                <!-- Import narration audio Beaver Story -->
+                <audio id="beaver_01" src="\assets\Audio\narration\Beaver Story\beaver_story_01.mp3" preload="auto" volume="1"></audio>
+                <audio id="beaver_02" src="\assets\Audio\narration\Beaver Story\beaver_story_02.mp3" preload="auto" crossorigin="anonymous"></audio>
+                <audio id="beaver_03" src="\assets\Audio\narration\Beaver Story\beaver_story_03.mp3" preload="auto" crossorigin="anonymous"></audio>
+                <audio id="beaver_04" src="\assets\Audio\narration\Beaver Story\beaver_story_04.mp3" preload="auto" crossorigin="anonymous"></audio>
+                <audio id="beaver_05" src="\assets\Audio\narration\Beaver Story\beaver_story_05.mp3" preload="auto" crossorigin="anonymous"></audio>
+                <audio id="beaver_06" src="\assets\Audio\narration\Beaver Story\beaver_story_06.mp3" preload="auto" crossorigin="anonymous"></audio>
+                <audio id="beaver_07" src="\assets\Audio\narration\Beaver Story\beaver_story_07.mp3" preload="auto" crossorigin="anonymous"></audio>
+                <audio id="beaver_08" src="\assets\Audio\narration\Beaver Story\beaver_story_08.mp3" preload="auto" crossorigin="anonymous"></audio>
+                <audio id="beaver_09" src="\assets\Audio\narration\Beaver Story\beaver_story_09.mp3" preload="auto" crossorigin="anonymous"></audio>
+                <audio id="beaver_10" src="\assets\Audio\narration\Beaver Story\beaver_story_10.mp3" preload="auto" crossorigin="anonymous"></audio>
+                <audio id="beaver_11" src="\assets\Audio\narration\Beaver Story\beaver_story_11.mp3" preload="auto" crossorigin="anonymous"></audio>
+                <audio id="beaver_12" src="\assets\Audio\narration\Beaver Story\beaver_story_12.mp3" preload="auto" crossorigin="anonymous"></audio>
+
+                <!-- Import narration audio Medicine Wheel Story -->
+                <audio id="wheel_01" src="\assets\Audio\narration\Medicine Wheel\medicine_wheel_01.mp3" preload="auto" volume="1"></audio>
+                <audio id="wheel_02" src="\assets\Audio\narration\Medicine Wheel\medicine_wheel_02.mp3" preload="auto" crossorigin="anonymous"></audio>
+                <audio id="wheel_03" src="\assets\Audio\narration\Medicine Wheel\medicine_wheel_03.mp3" preload="auto" crossorigin="anonymous"></audio>
+                <audio id="wheel_04" src="\assets\Audio\narration\Medicine Wheel\medicine_wheel_04.mp3" preload="auto" crossorigin="anonymous"></audio>
+                <audio id="wheel_05" src="\assets\Audio\narration\Medicine Wheel\medicine_wheel_05.mp3" preload="auto" crossorigin="anonymous"></audio>
+                <audio id="wheel_06" src="\assets\Audio\narration\Medicine Wheel\medicine_wheel_06.mp3" preload="auto" crossorigin="anonymous"></audio>
+                <audio id="wheel_07" src="\assets\Audio\narration\Medicine Wheel\medicine_wheel_07.mp3" preload="auto" crossorigin="anonymous"></audio>
+
             </a-assets>
 
             <!-- <a-sphere position="0 0 -35" radius="55" material="side:back; color:#774e24"></a-sphere> -->
@@ -41,6 +66,8 @@
             <a-entity>
                 <a-entity class="wall interactive 1"></a-entity>
                 <a-entity id="wall_art1" wall-interaction-1 position="-30 2 -5"
+                  sound="src: #wheel_01"
+                  play-sound-on-event="mode: toggle-stop; event: click"
                           geometry="primitive:plane; width:1.0; height:1.0; depth:1.0;"
                           rotation="0 90 0;"
                           material="color:black;"></a-entity>
@@ -50,6 +77,8 @@
             <a-entity>
                 <a-entity class="wall interactive 2"></a-entity>
                 <a-entity id="wall_art1" wall-interaction-2 position="-30 2 -40"
+                  sound="src: #beaver_01"
+                  play-sound-on-event="mode: toggle-stop; event: click"
                           geometry="primitive:plane; width:1.0; height:1.0; depth:1.0;"
                           rotation="0 90 0;"
                           material="color:black;"></a-entity>
