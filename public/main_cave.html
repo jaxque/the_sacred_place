@@ -53,6 +53,10 @@
                 <img id="beaverImage_10" src="\assets\beaver_story_art\beaver_art_10.png">
                 <img id="beaverImage_11" src="\assets\beaver_story_art\beaver_art_11.png">
                 <img id="beaverImage_12" src="\assets\beaver_story_art\beaver_art_12.png">
+
+                <img id="thunderbird_image" src="\assets\ThunderbirdImage.png">
+
+                <img id="naming_ceremony_image" src="\assets\NamingCeremonyImage.png">
                 
 
                 <!-- Import narration audio Beaver Story -->
@@ -201,20 +205,20 @@
             <a-cylinder id="artwork3" position="30 0 -5" radius="1" height="2.5" color="grey"></a-cylinder>
             <a-entity>
                 <a-entity class="wall interactive 3"></a-entity>
-                <a-entity id="wall_art1"  link="href: story_02.html"; position="30 2 -5"
+                <a-image  src="#naming_ceremony_image" link="href: story_02.html" position="30 2 -5"
                           geometry="primitive:plane; width:1.0; height:1.0; depth:1.0;"
-                          rotation="0 -90 0;"
-                          material="color:black;"></a-entity>
+                          rotation="0 -90 0;">
+                </a-image>
             </a-entity>
 
             <!-- Thunderbird -->
             <a-cylinder id="artwork4" position="30 0 -40" radius="1" height="2.5" color="grey"></a-cylinder>
             <a-entity>
                 <a-entity class="wall interactive 4"></a-entity>
-                <a-entity id="wall_art1" link="href: story_01.html"; position="30 2 -40"
+                <a-image  src="#thunderbird_image" link="href: story_01.html" position="30 2 -40"
                           geometry="primitive:plane; width:1.0; height:1.0; depth:1.0;"
-                          rotation="0 -90 0;"
-                          material="color:black;"></a-entity>
+                          rotation="0 -90 0;">
+                </a-image>
             </a-entity>
 
             <!-- Dripstone -->
